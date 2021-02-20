@@ -1,0 +1,54 @@
+import sys
+
+var1 = sys.argv[1]
+var2 = sys.argv[2]
+var3 = sys.argv[3]
+
+var1 = var1.upper()#convert to uppercase
+var2 = var2.upper()
+
+var2 = var2.upper()
+var3 = var3.upper()
+
+var1 = var1.replace(" ","")# turn length of empty into 0
+var2 = var2.replace(" ","")
+var3 = var3.replace(" ","")
+
+if len(var1) == 0:
+        print("ERROR: You must enter a DNA sequence")
+        sys.exit()
+elif len(var2) == 0:
+        print("ERROR: You must enter a DNA sequence")
+        sys.exit()
+elif len(var3) == 0:
+        print("ERROR: You must enter a DNA sequence")
+        sys.exit()
+else:
+        genome = var1 + var2 + var3
+genome1 = genome
+genome2 = genome
+
+genome = genome.replace("A","")
+genome = genome.replace("T","")
+genome = genome.replace("G","")
+genome = genome.replace("C","")
+
+if len(genome) > 0:
+        print("ERROR: Invalid DNA sequence")
+        sys.exit()
+else:
+        print("Sequence 1:", len(var1))
+        print("Sequence 2:", len(var2))
+        print("Sequence 3:", len(var3))
+
+print(genome2)
+
+genome1 = genome1.replace("A","")
+genome1 = genome1.replace("T","")
+
+total = float(len(genome2))
+g_c = float(len(genome1))
+
+percentg_c = g_c/total
+percentg_c1 = percentg_c * 100
+print(percentg_c1)
